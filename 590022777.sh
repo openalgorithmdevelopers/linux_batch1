@@ -3,4 +3,4 @@ ls -l
 pwd
 cat 590022777.sh
 whoami
-
+history | tail -n 20
