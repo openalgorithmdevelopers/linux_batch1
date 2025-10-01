@@ -1,0 +1,40 @@
+ 2016  ls
+ 2017  clear
+ 2018  ls
+ 2019  cat todo.txt
+ 2020  clear
+ 2021  ls
+ 2022  echo "hello all"
+ 2023  ls
+ 2024  vi first.sh
+ 2025  ls
+ 2026  ./first.sh
+ 2027  ls -l
+ 2028  chmod 777 first.sh
+ 2029  ls -l
+ 2030  ./first.sh
+ 2031  vi first.sh
+ 2032  ./first.sh
+ 2033  vi first.sh
+ 2034  ./first.sh
+ 2035  vi first.sh
+ 2036  ./first.sh
+ 2037  vi first.sh
+ 2038  clear
+ 2039  ./first.sh
+ 2040  clear
+ 2041  ls
+ 2042  git add first.sh
+ 2043  git commit -m "adding sample scripting files"
+ 2044  history | grep "push"
+ 2045  git push -u origin main
+ 2046  clear
+ 2047  ls
+ 2048  hisotry
+ 2049  history
+ 2050  clear
+ 2051  ls
+ 2052  history | tail -n 20
+ 2053  history | tail -n 40
+ 2054  clear
+ 2055  history | tail -n 40 > history.txt
