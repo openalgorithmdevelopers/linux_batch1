@@ -1,0 +1,5 @@
+Tasks for the day
+1) write very basic shell script consisting of atleast 5 valid commands
+2) push the file on github with
+2.1) name of the script should be as per your sap id
+2.2) it should be pushed on respective day's directory only
