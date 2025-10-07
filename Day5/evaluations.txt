@@ -9,3 +9,5 @@ SNO	Name		Marks
 5	Kush Garg	10
 6	Sajal		10
 7	Arpit		10
+8	Tanishq		10
+9	Aditya Rawat	10
