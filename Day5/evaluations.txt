@@ -11,3 +11,5 @@ SNO	Name		Marks
 7	Arpit		10
 8	Tanishq		10
 9	Aditya Rawat	10
+10	Priyanshu	10
+11	Manasvi		10
