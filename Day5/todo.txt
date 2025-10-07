@@ -1,0 +1,2 @@
+Today' Task : Shell Scripting Basic
+Write a shell script to ask user the name of a file and display the path to the file
