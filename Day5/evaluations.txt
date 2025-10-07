@@ -14,3 +14,4 @@ SNO	Name		Marks
 10	Priyanshu	10
 11	Manasvi		10
 12	Deep		10
+13	Gursimrat	10
