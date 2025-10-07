@@ -1,2 +1,3 @@
 Today' Task : Shell Scripting Basic
-Write a shell script to ask user the name of a file and display the path to the file
+1) Write a shell script to ask users two numbers and the operation to perform (+,-,*,/) and display the result
+2) Write a shell script to ask user the name of a file and display the path to the file
