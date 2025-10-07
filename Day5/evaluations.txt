@@ -8,3 +8,4 @@ SNO	Name		Marks
 4	Tusharika	10
 5	Kush Garg	10
 6	Sajal		10
+7	Arpit		10
