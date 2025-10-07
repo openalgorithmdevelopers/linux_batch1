@@ -6,3 +6,5 @@ SNO	Name		Marks
 2	Ujwal Dimri	10
 3	Jai Chaprana	10
 4	Tusharika	10
+5	Kush Garg	10
+6	Sajal		10
