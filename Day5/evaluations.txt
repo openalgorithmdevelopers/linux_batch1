@@ -15,3 +15,4 @@ SNO	Name		Marks
 11	Manasvi		10
 12	Deep		10
 13	Gursimrat	10
+14	Tejas		10
