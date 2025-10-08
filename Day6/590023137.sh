@@ -1,11 +1,13 @@
-read -p "enter first digit of sap" d1
-read -p "enter second digit of sap" d2
-read -p "enter third digit of sap" d3
-read -p "enter fourth digit of sap" d4
-read -p " enter fifth digit of sap " d5
-sum=$((d1 + d2 + d3 + d4 + d5))
-if [ $sum -ge 0 ]; then
-echo "sum of all digit in sap id: $sum"
+read -p "Enter your 5 digit SAP ID: " sap
+if [ $sap -ge 10000 -a $sap -le 99999 ];
+then
+	d1=$((sap/10000))
+	d2=$(((sap/1000)%10))
+	d3=$(((sap/100)%10))
+	d4=$(((sap/10)%10))
+	d5=$((sap%10))
+	sum=$((d1+d2+d3+d4+d5))
+	echo "The sum is of sap id $sap = $sum"
 else
-echo "error"
+	echo "Please enter a 5 digit number"
 fi
