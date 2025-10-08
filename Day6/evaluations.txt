@@ -6,3 +6,4 @@ SNo	Name		Marks
 2	Priyanshu P	10
 3	Tanishq		10
 4	Jai C		10
+5	Tejas		10
