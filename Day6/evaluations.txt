@@ -7,3 +7,14 @@ SNo	Name		Marks
 3	Tanishq		10
 4	Jai C		10
 5	Tejas		10
+6 Sajal  10
+7 Paras  10
+8  Manasvi  10
+9 Aditya  10
+10 Kush  10
+11  Raghav  10
+12 Avni  10
+13 Aaryanshi  10
+14	Ujwal	10
+15	Arpit	10
+16	Depansh M	10
