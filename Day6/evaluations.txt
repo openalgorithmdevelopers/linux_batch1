@@ -23,3 +23,5 @@ SNo	Name		Marks
 19	Niharika	10
 20	Mauli		10
 21	Deep		10
+22	Shivam		8
+23	Kanishka	5
