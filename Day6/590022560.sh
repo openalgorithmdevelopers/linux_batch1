@@ -9,6 +9,6 @@ then
 	sum=$((d1+d2+d3+d4+d5))
 	echo "The sum is of sap id $sap = $sum"
 else
-	echo "Please enter a 3 digit number"
+	echo "Please enter a 5 digit number"
 fi
 
