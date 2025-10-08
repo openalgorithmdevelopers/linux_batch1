@@ -20,3 +20,6 @@ SNo	Name		Marks
 16	Depansh M	10
 17	Tusharika	10
 18	Gursimrat	10
+19	Niharika	10
+20	Mauli		10
+21	Deep		10
