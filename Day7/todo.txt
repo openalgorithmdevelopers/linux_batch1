@@ -1,0 +1,6 @@
+14 Oct 2025
+Today's Task
+> Get a number from the user and 
+	1) print the number of digits
+	2) print whether the number is odd or even
+	3) print whether the number is palindrome or not
