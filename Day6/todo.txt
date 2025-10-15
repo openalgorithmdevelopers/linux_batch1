@@ -1,0 +1,2 @@
+Today's Task 8 Oct 2025
+1) Write the shell script to ask the user his/her sap id and display the sum of all the digits of his/her sap id.

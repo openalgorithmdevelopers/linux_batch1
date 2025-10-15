@@ -1,0 +1,8 @@
+Today's Task 15 Oct 2025
+
+
+1)	Write a script that checks whether a given number is a palindrome or not. A palindrome number reads the same backward as forward.
+2)	Write a script to take multiple numbers from the command line and print the maximum and minimum of them.
+
+Below tasks is optional
+#2)	Create a script that takes multiple numbers as input and sorts them in ascending or descending order.

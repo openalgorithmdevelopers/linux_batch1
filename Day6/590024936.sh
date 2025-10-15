@@ -1,0 +1,19 @@
+read -p "Enter 5-digit SAP ID: " sap
+
+a=$((sap % 10))         
+sap=$((sap / 10))       
+
+b=$((sap % 10))
+sap=$((sap / 10))
+
+c=$((sap % 10))
+sap=$((sap / 10))
+
+d=$((sap % 10))
+sap=$((sap / 10))
+
+e=$((sap % 10))
+
+sum=$((a + b + c + d + e))
+
+echo "Sum = $sum"

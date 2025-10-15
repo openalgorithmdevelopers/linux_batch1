@@ -1,0 +1,27 @@
+8 Oct 2025
+
+SNo	Name		Marks
+
+1	Raghav Vij	10
+2	Priyanshu P	10
+3	Tanishq		10
+4	Jai C		10
+5	Tejas		10
+6 Sajal  10
+7 Paras  10
+8  Manasvi  10
+9 Aditya  10
+10 Kush  10
+11  Raghav  10
+12 Avni  10
+13 Aaryanshi  10
+14	Ujwal	10
+15	Arpit	10
+16	Depansh M	10
+17	Tusharika	10
+18	Gursimrat	10
+19	Niharika	10
+20	Mauli		10
+21	Deep		10
+22	Shivam		8
+23	Kanishka	5
