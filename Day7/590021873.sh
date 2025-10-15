@@ -1,12 +1,8 @@
-
-
-
 while true
 do
     
     read -p "Enter a number (0 to exit): " num
 
-    # Exit condition
     if [ "$num" -eq 0 ]; then
         echo "Exiting..."
         break
@@ -33,4 +29,3 @@ do
 
     echo "----------------------------"
 done
-
