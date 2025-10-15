@@ -1,0 +1,25 @@
+15 Oct 25
+
+SNo.	Name		Marks
+
+1	Deepansh	0
+2	Kush Garg	3
+3	Arpan		3
+4	Sajal		3
+5	Rishabh		0
+6	Shivam		3
+7	Tejas		3	
+8	Priyanshu	5
+9	Avni		3
+10	Raghav Vij	10
+11	Niharika	3
+12	Aaryanshi	5
+13	Jai 		10
+14	Manasvi		6
+15	Mauli		1
+16	Raghav Arjun	10
+17	Tusharika	5
+18	Kanishka
+19	Deep		5
+20	Tanisq		10
+21	Arpit		5	
