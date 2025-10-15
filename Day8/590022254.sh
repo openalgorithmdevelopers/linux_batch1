@@ -6,50 +6,85 @@ do
     echo "        MENU"
     echo "==============================="
     echo "1. Check if a number is Palindrome"
-    echo "2. Sort multiple numbers"
+    echo "2. Sort numbers"
     echo "3. Exit"
     echo "==============================="
-    read -p "Enter your choice (1-3): " choice
+    
+    echo -n "Enter your choice (1-3): "
+    read choice
 
-    case $choice in
-        1)
-            # Palindrome check
-            read -p "Enter a number: " num
-            rev=$(echo $num | rev)
+  
+    if [ "$choice" -eq 1 ]; then
+        echo -n "Enter a number: "
+        read num
+        rev=""
+        length=${#num}
 
-            if [ "$num" == "$rev" ]; then
-                echo "$num is a Palindrome number."
-            else
-                echo "$num is NOT a Palindrome number."
+
+        for (( i=length-1; i>=0; i-- ))
+        do
+            rev="$rev${num:$i:1}"
+        done
+
+        if [ "$num" = "$rev" ]; then
+            echo "$num is a Palindrome."
+        else
+            echo "$num is NOT a Palindrome."
+        fi
+
+
+    elif [ "$choice" -eq 2 ]; then
+        echo "Enter numbers one by one (type 'done' to finish):"
+        numbers=()
+        while true
+        do
+            read n
+            if [ "$n" = "done" ]; then
+                break
             fi
-            ;;
-        2)
-            # Sorting numbers
-            read -p "Enter numbers separated by spaces: " -a nums
-            echo "Choose sorting order:"
-            echo "1. Ascending"
-            echo "2. Descending"
-            read -p "Enter your choice (1 or 2): " order
+            numbers+=($n)
+        done
 
-            if [ "$order" -eq 1 ]; then
-                echo "Sorted in Ascending order:"
-                printf "%s\n" "${nums[@]}" | sort -n
-            elif [ "$order" -eq 2 ]; then
-                echo "Sorted in Descending order:"
-                printf "%s\n" "${nums[@]}" | sort -nr
-            else
-                echo "Invalid order choice!"
-            fi
-            ;;
-        3)
-            echo "Exiting... Goodbye!"
-            break
-            ;;
-        *)
-            echo "Invalid choice! Please enter 1, 2, or 3."
-            ;;
-    esac
+        echo "Choose sorting order:"
+        echo "1. Ascending"
+        echo "2. Descending"
+        echo -n "Enter your choice: "
+        read order
+
+        len=${#numbers[@]}
+        for (( i=0; i<len-1; i++ ))
+        do
+            for (( j=i+1; j<len; j++ ))
+            do
+                if [ "$order" -eq 1 ]; then
+
+                    if [ ${numbers[i]} -gt ${numbers[j]} ]; then
+                        temp=${numbers[i]}
+                        numbers[i]=${numbers[j]}
+                        numbers[j]=$temp
+                    fi
+                else
+
+                    if [ ${numbers[i]} -lt ${numbers[j]} ]; then
+                        temp=${numbers[i]}
+                        numbers[i]=${numbers[j]}
+                        numbers[j]=$temp
+                    fi
+                fi
+            done
+        done
+
+        echo "Sorted numbers: ${numbers[@]}"
+
+
+    elif [ "$choice" -eq 3 ]; then
+        echo "Goodbye!"
+        break
+
+    # Invalid choice
+    else
+        echo "Invalid choice! Please enter 1, 2, or 3."
+    fi
 
     echo "-------------------------------"
 done
-
