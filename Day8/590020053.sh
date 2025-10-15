@@ -12,18 +12,34 @@ fi
 
 
 
-echo "enter a number:" 
-read number 
-echo "enter 1 for ascending and 2 for decending"
-read choice
+echo "How many numbers do you want to enter?"
+read n
 
-for n in number
+
+echo "Enter number 1:"
+read num
+max=$num
+min=$num
+
+
+for ((i=2; i<=n; i++))
 do
-	echo$n
-done | {
-    if [ $choice -eq 1 ]
+    echo "Enter number $i:"
+    read num
+
+    if [ $num -gt $max ]
     then
-        sort -n
-    else
-        sort -nr
+        max=$num
     fi
+
+    if [ $num -lt $min ]
+    then
+        min=$num
+    fi
+done
+
+
+echo "Maximum number: $max"
+echo "Minimum number: $min"
+
+
