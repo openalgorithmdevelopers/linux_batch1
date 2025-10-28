@@ -1,24 +1,25 @@
-num=$1
-
-if [ $num ]
-then
-if [ $num -eq 0 ]
-then
-	echo "Zero number"
-elif [ $num -gt 0 ]
-then
-	echo "Positive number"
+n=$1
+k=$2
+read -p "Enter first number (k): " k
+read -p "Enter choice: " choice
+if [ "$choice" -lt 0 ]; then
+    echo "Enter a valid choice"
 else
-	echo "Negative number"
+    for (( i=0; i<k; i++ )); do
+        if [ "$k" -eq "$choice" ]; then
+            echo "$choice"
+        fi
+    done
+fi
+read -p "Enter second number (n): " n
+read -p "Enter choice: " choice
+if [ "$choice" -lt 0 ]; then
+    echo "Enter a valid choice"
+else
+    for (( i=0; i<n; i++ )); do
+        if [ "$n" -eq "$choice" ]; then
+            echo "$choice"
+        fi
+    done
 fi
 
-while  [ $num -gt 0 ]
-do
-	digCount=$((digCount+1))
-	num=$((num/10))
-done
-
-echo "The given number has $digCount digits"
-else 
-	echo "No number given"
-fi
