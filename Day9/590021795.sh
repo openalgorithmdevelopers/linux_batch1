@@ -1,12 +1,9 @@
+#!/bin/bash
 
-read -p "enter a number" num
+read -p "Enter a number: " num
 
-if [ $num -gt 0 ]
-then
-    echo "It is a positive number!"
-elif [ $num -lt 0 ]
-then
-    echo "It is a negative number!"
+if [ $((num % 2)) -eq 0 ]; then
+    echo "$num is even."
 else
-    echo "Number is Zero"
+    echo "$num is odd."
 fi
