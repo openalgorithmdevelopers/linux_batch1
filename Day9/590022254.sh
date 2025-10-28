@@ -1,26 +1,24 @@
 #!/bin/bash
 
-
-if [ $# -eq 0 ]; then
-    echo "Please provide a number as argument!"
-    exit 1
-fi
-
-num=$1
-
-
-if [ $num -gt 0 ]; then
-    echo "$num is Positive"
-elif [ $num -lt 0 ]; then
-    echo "$num is Negative"
+if [ $# -ne 1 ]; then
+    echo "ERROR: Please provide ONE number as command line argument!"
+    echo "Example: ./task.sh 123"
 else
-    echo "$num is Zero"
+    num=$1
+
+    if [ $num -gt 0 ]; then
+        echo "$num is POSITIVE."
+    elif [ $num -lt 0 ]; then
+        echo "$num is NEGATIVE."
+    else
+        echo "$num is ZERO."
+    fi
+
+    num_without_sign=${num#-}
+    digits=$(echo -n "$num_without_sign" | wc -c)
+
+    echo "Number of digits in $num = $digits"
 fi
 
-
-abs_num=${num#-}
-count=${#abs_num}
-
-echo "Number of digits in $num = $count"
 
 
