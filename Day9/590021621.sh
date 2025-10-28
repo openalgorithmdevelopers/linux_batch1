@@ -30,4 +30,20 @@ else
 fi
 
 echo "Number of digits: $digCount"
+echo "Enter the value"
+num=$1
+digitcount=0
 
+if [ $num -eq 0 ]
+then
+    digitcount=1
+else
+    while [ $num -gt 0 ]
+    do
+        digitcount=$((digitcount + 1))
+        num=$((num / 10))
+    done
+fi
+
+echo "Number of digits: $digitcount"
+ 
