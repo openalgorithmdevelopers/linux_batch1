@@ -14,14 +14,3 @@ done
 echo " $count "
 fi
 
-echo "------------------------------------------------------------------------------------------------------"
-num=$1
-if [ $num -lt 0 ];
-then 
-echo "Negative "
-elif [ $num -gt 0 ];
-then 
-echo "Positive"
-else
-echo "Zero"
-fi
