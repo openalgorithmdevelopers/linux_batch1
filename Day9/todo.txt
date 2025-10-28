@@ -1,0 +1,6 @@
+Today's Task
+
+1) Write a shell script to check if a given number is positive, negative or zero.
+1) Write a shell script to count the number of digits in a given number
+
+For the above tasks, get the number from the command line arguments
