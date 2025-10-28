@@ -1,24 +1,38 @@
 #!/bin/bash
 
-if [ $# -ne 1 ]; then
-    echo "ERROR: Please provide ONE number as command line argument!"
-    echo "Example: ./task.sh 123"
+if [ $# -ne 2 ]
+then
+    echo "Please run like: ./script.sh <number> <position>"
 else
     num=$1
+    pos=$2
 
-    if [ $num -gt 0 ]; then
-        echo "$num is POSITIVE."
-    elif [ $num -lt 0 ]; then
-        echo "$num is NEGATIVE."
-    else
-        echo "$num is ZERO."
+    if [ $num -lt 0 ]
+    then
+        num=$(( -num ))
     fi
 
-    num_without_sign=${num#-}
-    digits=$(echo -n "$num_without_sign" | wc -c)
+    len=${#num}
 
-    echo "Number of digits in $num = $digits"
+    if [ $pos -le 0 ] || [ $pos -gt $len ]
+    then
+        echo "Invalid"
+    else
+        i=1
+        temp=$num
+
+        while [ $i -lt $pos ]
+        do
+            temp=$(( temp / 10 ))
+            i=$(( i + 1 ))
+        done
+
+        digit=$(( temp % 10 ))
+        echo "Digit at position $pos is: $digit"
+    fi
 fi
+
+
 
 
 
