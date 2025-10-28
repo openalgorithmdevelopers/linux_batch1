@@ -12,7 +12,7 @@ else
 	echo "Negative number"
 fi
 
-while  [ $num -gt 0 ]
+while  [ $num -ne 0 ]
 do
 	digCount=$((digCount+1))
 	num=$((num/10))
