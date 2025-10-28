@@ -1,0 +1,22 @@
+SNo	Name		Marks
+
+1	Purvansh	0
+2	Tejas		0
+3	Manasvi		7
+4	Mauli		1
+5	Aryanshi	10
+6	Kanishka	8
+7	Avni		3
+8	Niharika	1
+9	Sana		2
+10	Ujwal		10
+11	Arpit		10
+12	Aditya		10
+13	Tusharika	8
+14	Shivam		2
+15	Gursimrat	5
+16	Raghav		8
+17	Jai		3
+18	Tanisq		1
+19	Kush		1
+
