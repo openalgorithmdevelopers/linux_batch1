@@ -9,7 +9,7 @@ then
     fi
 done < "RohanSharma.txt"
 isCount=$(grep -ow 'is' RohanSharma.txt | wc -l)
-echo "$isCount"
-echo "$count"
-echo "$totalCount"
+echo "number of is $isCount"
+echo "number of spaces $count"
+echo "total number of character $totalCount"
 
