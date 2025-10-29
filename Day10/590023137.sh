@@ -13,15 +13,9 @@ do
     space_count=$((space_count + 1))
   fi
 
-  pair="${prev_char}${character}"
-  if [ "$pair" = "is" ]; then
-    is_count=$((is_count + 1))
-  fi
 
-  prev_char="$character"
 done < "$filename"
 
 echo "Number of spaces: $space_count"
-echo "Number of times 'is' appears: $is_count"
 echo "Total number of characters: $char_count"
 
