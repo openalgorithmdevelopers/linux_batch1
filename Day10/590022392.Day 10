@@ -1,0 +1,15 @@
+#!/bin/bash
+if [$# -eq 0];then
+echo "Usage: $0<filename>"
+exit 1 
+fi
+filename=$1
+if [! -f "$filename"];then
+echo "Error: File'$filename'not found!"
+exit 1
+fi
+spaces=$(grep -o " " "$filename" | wc -l)
+char_count=$(wc -m < "$filename")
+echo "File Name =$filename"
+echo "NUmber of spaces =$spaces"
+echo "Number of char =$char_count"
