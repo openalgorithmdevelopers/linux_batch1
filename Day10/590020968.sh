@@ -13,17 +13,8 @@ contents=$(cat "$filename")
 space_only=$(echo "$contents" | tr -cd ' ')
 spaces=${#space_only}
 char_count=${#contents}
-count=0
-text=" $contents "
-pos=0
-while true; do
-  match=$(expr index "${text:pos}" " is ")
-  if [ "$match" -eq 0 ]; then
-    break
-  fi
-  count=$((count + 1))
-  pos=$((pos + match + 2))
-done
+# Count 'is' as whole word using grep -o -w
+count=$(grep -o -w "is" "$filename" | wc -l)
 echo "Number of spaces: $spaces"
 echo "Number of times 'is' present: $count"
 echo "Total number of characters: $char_count"
