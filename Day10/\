@@ -9,12 +9,15 @@ do
 		if [ "$char" =  " " ]
 		then
 			spaceCount=$((spaceCount+1))
+		elif [ "$pair" = "is" ]
+		then
+			isCount=$((isCount+1))
 		fi
 		prevChar="$char"
 		totalChar=$((totalChar+1))
 	done < "$file"
 	echo "Total Space count: $spaceCount"
-	echo "Total is count: $(grep -ow -r 'is' $file |  wc -l)"
+	isCount= grep -ow -r "is" | wc -l 
 	echo "Total Characters: $totalChar"
 
 
