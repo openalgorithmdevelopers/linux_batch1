@@ -1,0 +1,4 @@
+Write the SHELL script to read a filename from the command line and 
+1) Echo the number of spaces present in the file
+2) Echo the number of times "is" is present in the file
+3) Echo total number of characters present in the file
