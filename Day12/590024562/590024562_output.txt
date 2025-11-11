@@ -7,7 +7,7 @@ sample: 2
 
 Total number of unique words: 15
 
-Listing of all unique words and their frequency:
+All unique words with their frequencies:
 this: 3
 file: 3
 words: 2
