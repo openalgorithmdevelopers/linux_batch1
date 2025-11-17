@@ -2,38 +2,59 @@
 
 file=$1
 
-if [ -z "$file" ]
-then
-    echo "Usage: ./script.sh <path-to-file>"
-    exit 1
-fi
-
 if [ ! -f "$file" ]
 then
     echo "File not found!"
     exit 1
 fi
 
-filename=$(basename "$file")
-name="${filename%.*}"
-output="${name}_stats.txt"
+output="${file}_stats.txt"
 
-echo "Top 5 most occurring words:" > "$output"
-echo "----------------------------" >> "$output"
-echo -e "Count\tWord" >> "$output"
-tr " " "\n" < "$file" | sort | uniq -c | sort -nr | head -5 | awk '{printf "%s\t%s\n", $1, $2}' >> "$output"
+words=()
+while read line
+do
+    for word in $line
+    do
+        words+=("$word")
+    done
+done < "$file"
 
+unique=()
+for w in "${words[@]}"
+do
+    found=0
+    for u in "${unique[@]}"
+    do
+        if [ "$w" = "$u" ]; then
+            found=1
+            break
+        fi
+    done
+    if [ $found -eq 0 ]; then
+        unique+=("$w")
+    fi
+done
+
+echo "File: $file" > "$output"
+echo "Total words: ${#words[@]}" >> "$output"
+echo "Unique words: ${#unique[@]}" >> "$output"
 echo "" >> "$output"
-echo "Total unique words:" >> "$output"
-tr " " "\n" < "$file" | sort | uniq | wc -l >> "$output"
+echo "Word counts:" >> "$output"
 
-echo "" >> "$output"
-echo "All unique words with frequency:" >> "$output"
-echo "----------------------------" >> "$output"
-echo -e "Count\tWord" >> "$output"
-tr " " "\n" < "$file" | sort | uniq -c | sort -nr | awk '{printf "%s\t%s\n", $1, $2}' >> "$output"
+for u in "${unique[@]}"
+do
+    count=0
+    for w in "${words[@]}"
+    do
+        if [ "$u" = "$w" ]; then
+            count=$((count + 1))
+        fi
+    done
+    echo "$u - $count" >> "$output"
+done
 
 echo "Output saved as $output"
+
 
 
 

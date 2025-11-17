@@ -1,0 +1,25 @@
+Top five most occurring words:
+this: 3
+file: 3
+words: 2
+some: 2
+sample: 2
+
+Total number of unique words: 15
+
+All unique words with their frequencies:
+this: 3
+file: 3
+words: 2
+some: 2
+sample: 2
+is: 2
+input: 2
+times: 1
+testing: 1
+repeated: 1
+multiple: 1
+for: 1
+contains: 1
+are: 1
+a: 1

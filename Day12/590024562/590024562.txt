@@ -1,0 +1,1 @@
+This is a sample input file. This file contains some sample words. Some words are repeated multiple times. This input file is for testing.
