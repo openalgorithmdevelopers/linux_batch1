@@ -5,7 +5,7 @@ then
 fi
 
 file=$1
-output="file_name_stats.txt"
+output="${file}_stats.txt"
 
 echo "Top 5 most occurring words:" > $output
 cat $file | tr " " "\n" | sort | uniq -c | sort -nr | head -5 >> $output
@@ -17,3 +17,4 @@ echo "All words and their frequency:" >> $output
 cat $file | tr " " "\n" | sort | uniq -c | sort -nr >> $output
 
 echo "Done!"
+
