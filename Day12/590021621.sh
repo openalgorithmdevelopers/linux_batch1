@@ -1,137 +1,46 @@
-if [ $# -eq 0 ]
+#!/bin/bash
 
+file="$1"
 
-then
+read_words() {
+    words=($(tr -c 'a-zA-Z' '\n' < "$file" | tr 'A-Z' 'a-z'))
+}
 
+count_unique_words() {
+    unique=()
+    freq=()
 
-   echo "Please give a file name."
-
-
-   exit 1
-
-
-    echo "Please give a file name."
-
-
-    exit 1
-
-fi
-
-
-
-file=$1
-
-output="${file}_stats.txt"
-
-
-
-
-echo "Top 5 most occurring words:" > $output
-
-
-cat $file | tr " " "\n" | sort | uniq -c | sort -nr | head -5 >> $output
-
-
-unique_words=()
-
-
-
-
-echo "Total number of unique words:" >> $output
-
-
-cat $file | tr " " "\n" | sort | uniq | wc -l >> $output
-
-
-while read -r line
-
-
-do
-
-
-    for w in $line
-
-
-    do
-
-
-        word=$(echo "$w" | tr 'A-Z' 'a-z' | tr -cd 'a-z')
-
-
-
-
-echo "All words and their frequency:" >> $output
-
-
-cat $file | tr " " "\n" | sort | uniq -c | sort -nr >> $output
-
-
-        if [ -z "$word" ]; then
-
-
-            continue
-
-
-        fi
-
-
-
-
-echo "Done!"
-
-
+    for w in "${words[@]}"; do
+        [[ -z "$w" ]] && continue
         found=0
 
-
-        for u in "${unique_words[@]}"; do
-
-
-            if [ "$u" = "$word" ]; then
-
-
+        for i in "${!unique[@]}"; do
+            if [[ "${unique[$i]}" == "$w" ]]; then
+                freq[$i]=$((freq[$i] + 1))
                 found=1
-
-
                 break
-
-
             fi
-
-
         done
 
-
-
-
-
-        if [ $found -eq 0 ]; then
-
-
-            unique_words+=("$word")
-
-
+        if [[ $found -eq 0 ]]; then
+            unique+=("$w")
+            freq+=(1)
         fi
-
-
     done
+}
 
+write_output() {
+    echo "Total number of unique words: ${#unique[@]}" > stats.txt
+    echo "" >> stats.txt
+    echo "Unique words and their frequencies:" >> stats.txt
 
-done < "$file"
+    for i in "${!unique[@]}"; do
+        echo "${unique[$i]} : ${freq[$i]}" >> stats.txt
+    done
+}
 
+read_words
+count_unique_words
+write_output
 
-
-
-
-unique_count=${#unique_words[@]}
-
-
-
-
-
-echo "Total number of unique words in the file: $unique_count" > "$output"
-
-
-
-
-
-echo "Done! Output saved in $output"
+echo "Output saved to stats.txt"
