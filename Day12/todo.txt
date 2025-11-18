@@ -1,7 +1,1 @@
-Today's Task
-
-Create a file named "file_name_stats.txt" having below information for the file_name as provided
-by the user through the command line argument
-1) Top five most occurring words. 
-2) Total number of unique words in the file
-3) Listing of all the unique words and their frequency.
+Total number of unique words in the file: 39
