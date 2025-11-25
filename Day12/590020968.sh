@@ -22,4 +22,3 @@ echo "$unique_count" >> "$output_file"
 rm temp_counts.txt
 
 echo "Output written to file_name_stats.txt"
-
