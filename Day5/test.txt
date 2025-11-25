@@ -1,1 +1,18 @@
-dkdsajfdlk;fadkl
+Day 7 Oct 2025
+
+SNO	Name		Marks
+
+1	Raghav Vij	10
+2	Ujwal Dimri	10
+3	Jai Chaprana	10
+4	Tusharika	10
+5	Kush Garg	10
+6	Sajal		10
+7	Arpit		10
+8	Tanishq		10
+9	Aditya Rawat	10
+10	Priyanshu	10
+11	Manasvi		10
+12	Deep		10
+13	Gursimrat	10
+14	Tejas		10
